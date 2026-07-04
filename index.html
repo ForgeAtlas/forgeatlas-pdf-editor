@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ForgeAtlas PDF Editor</title>
-<meta name="description" content="Edit PDFs in your browser. White out text, add replacement text, and download a flattened PDF.">
+<title>Free Online PDF Editor | Edit PDF Files Free | ForgeAtlas</title>
+<meta name="description" content="Free online PDF editor from ForgeAtlas. Edit PDF files online free, white out text, add replacement text, and download your edited PDF. No signup. No installation.">
 <style>
 :root{--bg:#f5f7fb;--panel:#fff;--text:#182033;--muted:#667085;--border:#d7dce7;--brand:#2563eb;--brand-dark:#1d4ed8;--danger:#b42318;--shadow:0 16px 40px rgba(16,24,40,.08)}
 *{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
@@ -22,20 +22,63 @@ textarea,input[type=number]{width:100%;border:1px solid var(--border);border-rad
 .viewer{padding:24px;overflow:auto;min-height:calc(75vh - 64px);display:flex;justify-content:center;align-items:flex-start}.empty-state{color:var(--muted);padding:80px 20px}
 .page-wrap{position:relative;background:white;box-shadow:0 8px 30px rgba(16,24,40,.18);user-select:none}#pdfCanvas{display:block}.annotation-layer{position:absolute;inset:0;cursor:crosshair}
 .annotation{position:absolute;border:2px solid rgba(37,99,235,.8);background:#ffffff;opacity:1}.annotation.text{border:2px dashed #111;background:rgba(255,255,255,.05);color:#000;white-space:pre-wrap;line-height:1.2;padding:3px;cursor:move;font-weight:700;z-index:10}.annotation.selected{outline:3px solid #f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,.25)}.annotation.redact{cursor:move}.resize-handle{position:absolute;right:-7px;bottom:-7px;width:14px;height:14px;background:#f59e0b;border:2px solid #fff;border-radius:50%;cursor:nwse-resize;z-index:20}.annotation.text[contenteditable='true']{cursor:text;background:#fff8c5;outline:3px solid #2563eb}
+
+.marketing-panel{padding:18px;border:1px solid var(--border);border-radius:16px;background:#f8fafc;margin-bottom:18px}.marketing-panel h2{font-size:18px;margin:0 0 8px}.marketing-panel p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.45}.trust-list{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px 0}.trust-list span{font-size:13px;color:#344054;background:#fff;border:1px solid var(--border);border-radius:999px;padding:7px 9px}.link-button{display:block;text-align:center;text-decoration:none;border-radius:10px;padding:11px 12px;margin:8px 0;font-weight:700;background:var(--brand);color:white;border:1px solid var(--brand)}.link-button:hover{background:var(--brand-dark)}.recommended-tool{border:1px solid var(--border);background:#fff;border-radius:12px;padding:12px;margin:10px 0}.recommended-tool strong{display:block;margin-bottom:4px}.recommended-tool small{display:block;color:var(--muted);line-height:1.35}.recommended-tool a{display:inline-block;margin-top:8px;color:var(--brand);font-weight:700;text-decoration:none}.site-footer{padding:18px 24px;color:var(--muted);font-size:13px;text-align:center}.site-footer a{color:var(--brand);text-decoration:none;margin:0 8px}
+
 @media(max-width:900px){.app{grid-template-columns:1fr}.controls{position:static}.site-header{flex-direction:column;align-items:flex-start}}
 </style>
 </head>
 <body>
 <header class="site-header">
-  <div><h1>ForgeAtlas PDF Editor <small style='font-size:14px;color:#cbd5e1'>(v1.0)</small></h1><p>White out text, add replacement text, and download an edited PDF.</p></div>
-  <div class="privacy-badge">Files stay in your browser</div>
+  <div>
+    <h1>Free Online PDF Editor</h1>
+    <p>Edit PDF files online free. White out text, add replacement text, move it, resize it, and download your edited PDF.</p>
+  </div>
+  <div class="privacy-badge">No signup • No installation</div>
 </header>
 <main class="app">
 <section class="controls">
+  <div class="marketing-panel">
+    <h2>Premium-quality PDF editing — free to use</h2>
+    <p>Use ForgeAtlas to make quick PDF edits in your browser. No software download, no account, and no watermark.</p>
+    <div class="trust-list">
+      <span>✓ Free online editor</span>
+      <span>✓ No installation</span>
+      <span>✓ No signup</span>
+      <span>✓ Fast downloads</span>
+    </div>
+  </div>
+
+  <div class="marketing-panel">
+    <h2>Get new free PDF tools</h2>
+    <p>Enter your email address to get new PDF tools, productivity resources, exclusive releases, and special offers.</p>
+    <a class="link-button" href="https://tally.so/r/0Q5BlZ" target="_blank" rel="noopener">Get Free Updates</a>
+  </div>
+
+  <div class="marketing-panel">
+    <h2>Recommended business tools</h2>
+    <p>Useful tools for business owners, marketers, consultants, brokers, and entrepreneurs.</p>
+    <div class="recommended-tool">
+      <strong>GoHighLevel</strong>
+      <small>CRM, funnels, marketing automation, and client management.</small>
+      <a href="https://is.gd/AriIAB" target="_blank" rel="noopener sponsored">Try GoHighLevel →</a>
+    </div>
+    <div class="recommended-tool">
+      <strong>CustomGPT</strong>
+      <small>Create custom AI assistants trained on your own content and documents.</small>
+      <a href="https://is.gd/6qxD1O" target="_blank" rel="noopener sponsored">Learn about CustomGPT →</a>
+    </div>
+    <div class="recommended-tool">
+      <strong>Systeme.io</strong>
+      <small>Funnels, email marketing, online courses, and business tools.</small>
+      <a href="https://is.gd/xSji5g" target="_blank" rel="noopener sponsored">Start with Systeme.io →</a>
+    </div>
+  </div>
+
   <label class="upload-box">
     <input id="pdfInput" type="file" accept="application/pdf">
     <span>Upload PDF</span>
-    <small>First version: manual whiteout and replacement text. No server. No account.</small>
+    <small>Upload a PDF, white out text, add replacement text, and download the edited file.</small>
   </label>
   <div class="tool-card"><h2>Tools</h2>
     <button id="redactTool" class="tool active" type="button">White out / redact area</button>
@@ -58,7 +101,7 @@ textarea,input[type=number]{width:100%;border:1px solid var(--border);border-rad
     <button id="helpBtn" type="button">Quick Help</button>
     <p id="status" class="status">Upload a PDF to begin.</p>
   </div>
-  <div class="note"><strong>Important:</strong> This first version exports a flattened PDF image. That prevents hidden original text from remaining underneath, but the output will not be searchable/selectable text.</div>
+  <div class="note"><strong>Privacy note:</strong> This editor runs in your browser. The exported PDF is flattened, which helps prevent hidden original text from remaining underneath edits. Output text will not be searchable/selectable.</div>
 </section>
 <section class="viewer-section">
   <div class="page-nav">
@@ -69,6 +112,14 @@ textarea,input[type=number]{width:100%;border:1px solid var(--border);border-rad
   <div id="viewer" class="viewer"><div class="empty-state">Upload a PDF to preview and edit it here.</div></div>
 </section>
 </main>
+
+<footer class="site-footer">
+  <strong>ForgeAtlas Toolbox</strong>
+  <a href="https://tally.so/r/0Q5BlZ" target="_blank" rel="noopener">Get updates</a>
+  <a href="mailto:cliff604@yahoo.com">Contact</a>
+  <a href="mailto:cliff604@yahoo.com?subject=ForgeAtlas%20PDF%20Editor%20Feedback">Suggest a feature</a>
+</footer>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 <script>

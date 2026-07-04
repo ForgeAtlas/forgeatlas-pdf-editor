@@ -1,1 +1,307 @@
+<!DOCTYPE html>
+<!-- saved from url=(0081)file:///C:/Users/cliff/OneDrive/Documents/GitHub/forgeatlas-pdf-editor/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Free Online PDF Editor | Edit PDF Files Free | ForgeAtlas</title>
+<meta name="description" content="Free online PDF editor from ForgeAtlas. Edit PDF files online free, white out text, add replacement text, and download your edited PDF. No signup. No installation.">
+<style>
+:root{--bg:#f5f7fb;--panel:#fff;--text:#182033;--muted:#667085;--border:#d7dce7;--brand:#2563eb;--brand-dark:#1d4ed8;--danger:#b42318;--shadow:0 16px 40px rgba(16,24,40,.08)}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text)}
+.site-header{display:flex;justify-content:space-between;gap:24px;align-items:center;padding:28px 34px;background:#0f172a;color:white}
+.site-header h1{margin:0 0 8px;font-size:30px}.site-header p{margin:0;color:#cbd5e1}.privacy-badge{border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:10px 14px;color:#e2e8f0;white-space:nowrap}
+.app{display:grid;grid-template-columns:340px 1fr;gap:24px;padding:24px}.controls,.viewer-section{background:var(--panel);border:1px solid var(--border);border-radius:18px;box-shadow:var(--shadow)}
 .controls{padding:18px;height:fit-content;position:sticky;top:18px}.upload-box{display:block;padding:18px;border:2px dashed var(--border);border-radius:16px;cursor:pointer;background:#f8fafc;text-align:center}
+.upload-box input{display:none}.upload-box span{display:block;font-weight:700;font-size:18px;margin-bottom:6px}.upload-box small{color:var(--muted);line-height:1.35}
+.tool-card{border-top:1px solid var(--border);margin-top:18px;padding-top:18px}.tool-card h2{font-size:15px;margin:0 0 10px}
+button{width:100%;border:1px solid var(--border);background:white;color:var(--text);border-radius:10px;padding:11px 12px;margin:6px 0;cursor:pointer;font-weight:600}
+button:hover:not(:disabled){border-color:var(--brand)}button:disabled{opacity:.45;cursor:not-allowed}button.active,button.primary{background:var(--brand);color:white;border-color:var(--brand)}button.primary:hover:not(:disabled){background:var(--brand-dark)}
+textarea,input[type=number]{width:100%;border:1px solid var(--border);border-radius:10px;padding:10px;font:inherit}.inline-label{display:block;margin-top:10px;color:var(--muted);font-size:14px}
+.status{color:var(--muted);font-size:14px;line-height:1.35}.status.error{color:var(--danger)}.note{margin-top:18px;color:var(--muted);font-size:13px;line-height:1.45;background:#fffbeb;border:1px solid #fde68a;border-radius:12px;padding:12px}
+.viewer-section{min-height:75vh;overflow:hidden}.page-nav{display:flex;align-items:center;gap:14px;padding:14px;border-bottom:1px solid var(--border)}.page-nav button{width:auto;min-width:110px}#pageInfo{flex:1;text-align:center;color:var(--muted)}
+.viewer{padding:24px;overflow:auto;min-height:calc(75vh - 64px);display:flex;justify-content:center;align-items:flex-start}.empty-state{color:var(--muted);padding:80px 20px}
+.page-wrap{position:relative;background:white;box-shadow:0 8px 30px rgba(16,24,40,.18);user-select:none}#pdfCanvas{display:block}.annotation-layer{position:absolute;inset:0;cursor:crosshair}
+.annotation{position:absolute;border:2px solid rgba(37,99,235,.8);background:#ffffff;opacity:1}.annotation.text{border:2px dashed #111;background:rgba(255,255,255,.05);color:#000;white-space:pre-wrap;line-height:1.2;padding:3px;cursor:move;font-weight:700;z-index:10}.annotation.selected{outline:3px solid #f59e0b;box-shadow:0 0 0 2px rgba(245,158,11,.25)}.annotation.redact{cursor:move}.resize-handle{position:absolute;right:-7px;bottom:-7px;width:14px;height:14px;background:#f59e0b;border:2px solid #fff;border-radius:50%;cursor:nwse-resize;z-index:20}.annotation.text[contenteditable='true']{cursor:text;background:#fff8c5;outline:3px solid #2563eb}
+
+.marketing-panel{padding:18px;border:1px solid var(--border);border-radius:16px;background:#f8fafc;margin-bottom:18px}.marketing-panel h2{font-size:18px;margin:0 0 8px}.marketing-panel p{margin:0 0 12px;color:var(--muted);font-size:14px;line-height:1.45}.trust-list{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin:12px 0}.trust-list span{font-size:13px;color:#344054;background:#fff;border:1px solid var(--border);border-radius:999px;padding:7px 9px}.link-button{display:block;text-align:center;text-decoration:none;border-radius:10px;padding:11px 12px;margin:8px 0;font-weight:700;background:var(--brand);color:white;border:1px solid var(--brand)}.link-button:hover{background:var(--brand-dark)}.recommended-tool{border:1px solid var(--border);background:#fff;border-radius:12px;padding:12px;margin:10px 0}.recommended-tool strong{display:block;margin-bottom:4px}.recommended-tool small{display:block;color:var(--muted);line-height:1.35}.recommended-tool a{display:inline-block;margin-top:8px;color:var(--brand);font-weight:700;text-decoration:none}.site-footer{padding:18px 24px;color:var(--muted);font-size:13px;text-align:center}.site-footer a{color:var(--brand);text-decoration:none;margin:0 8px}
+
+@media(max-width:900px){.app{grid-template-columns:1fr}.controls{position:static}.site-header{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <h1>Free Online PDF Editor</h1>
+    <p>Edit PDF files online free. White out text, add replacement text, move it, resize it, and download your edited PDF.</p>
+  </div>
+  <div class="privacy-badge">No signup • No installation</div>
+</header>
+<main class="app">
+<section class="controls">
+  <div class="marketing-panel">
+    <h2>Premium-quality PDF editing — free to use</h2>
+    <p>Use ForgeAtlas to make quick PDF edits in your browser. No software download, no account, and no watermark.</p>
+    <div class="trust-list">
+      <span>✓ Free online editor</span>
+      <span>✓ No installation</span>
+      <span>✓ No signup</span>
+      <span>✓ Fast downloads</span>
+    </div>
+  </div>
+
+  <div class="marketing-panel">
+    <h2>Get new free PDF tools</h2>
+    <p>Enter your email address to get new PDF tools, productivity resources, exclusive releases, and special offers.</p>
+    <a class="link-button" href="https://tally.so/r/0Q5BlZ" target="_blank" rel="noopener">Get Free Updates</a>
+  </div>
+
+  <div class="marketing-panel">
+    <h2>Recommended business tools</h2>
+    <p>Useful tools for business owners, marketers, consultants, brokers, and entrepreneurs.</p>
+    <div class="recommended-tool">
+      <strong>GoHighLevel</strong>
+      <small>CRM, funnels, marketing automation, and client management.</small>
+      <a href="https://is.gd/AriIAB" target="_blank" rel="noopener sponsored">Try GoHighLevel →</a>
+    </div>
+    <div class="recommended-tool">
+      <strong>CustomGPT</strong>
+      <small>Create custom AI assistants trained on your own content and documents.</small>
+      <a href="https://is.gd/6qxD1O" target="_blank" rel="noopener sponsored">Learn about CustomGPT →</a>
+    </div>
+    <div class="recommended-tool">
+      <strong>Systeme.io</strong>
+      <small>Funnels, email marketing, online courses, and business tools.</small>
+      <a href="https://is.gd/xSji5g" target="_blank" rel="noopener sponsored">Start with Systeme.io →</a>
+    </div>
+  </div>
+
+  <label class="upload-box">
+    <input id="pdfInput" type="file" accept="application/pdf">
+    <span>Upload PDF</span>
+    <small>Upload a PDF, white out text, add replacement text, and download the edited file.</small>
+  </label>
+  <div class="tool-card"><h2>Tools</h2>
+    <button id="redactTool" class="tool active" type="button">White out / redact area</button>
+    <button id="textTool" class="tool" type="button">Click-to-add text</button>
+    <button id="selectTool" class="tool" type="button">Select / move item</button>
+  </div>
+  <div class="tool-card"><h2>Replacement text</h2>
+    <textarea id="replacementText" rows="4" placeholder="Type replacement text here, then choose Add replacement text and click the PDF."></textarea>
+    <label class="inline-label">Font size <input id="fontSize" type="number" value="14" min="6" max="72"></label>
+  </div>
+  <div class="tool-card"><h2>Actions</h2>
+    <button id="undoBtn" type="button" disabled="">Undo last item</button>
+    <button id="clearPageBtn" type="button" disabled="">Clear current page</button>
+    <button id="placeTextBtn" type="button" disabled="">Place text in last white box</button>
+    <button id="smallerTextBtn" type="button" disabled="">Make selected text smaller</button>
+    <button id="largerTextBtn" type="button" disabled="">Make selected text larger</button>
+    <button id="updateTextBtn" type="button" disabled="">Update selected text</button>
+    <button id="deleteSelectedBtn" type="button" disabled="">Delete selected item</button>
+    <button id="downloadBtn" class="primary" type="button" disabled="">Download edited PDF</button>
+    <button id="helpBtn" type="button">Quick Help</button>
+    <p id="status" class="status">Upload a PDF to begin.</p>
+  </div>
+  <div class="note"><strong>Privacy note:</strong> This editor runs in your browser. The exported PDF is flattened, which helps prevent hidden original text from remaining underneath edits. Output text will not be searchable/selectable.</div>
+</section>
+<section class="viewer-section">
+  <div class="page-nav">
+    <button id="prevPage" type="button" disabled="">Previous</button>
+    <span id="pageInfo">No PDF loaded</span>
+    <button id="nextPage" type="button" disabled="">Next</button>
+  </div>
+  <div id="viewer" class="viewer"><div class="empty-state">Upload a PDF to preview and edit it here.</div></div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <strong>ForgeAtlas Toolbox</strong>
+  <a href="https://tally.so/r/0Q5BlZ" target="_blank" rel="noopener">Get updates</a>
+  <a href="mailto:cliff604@yahoo.com">Contact</a>
+  <a href="mailto:cliff604@yahoo.com?subject=ForgeAtlas%20PDF%20Editor%20Feedback">Suggest a feature</a>
+</footer>
+
+<script src="./Free Online PDF Editor _ Edit PDF Files Free _ ForgeAtlas_files/pdf.min.js.download"></script>
+<script src="./Free Online PDF Editor _ Edit PDF Files Free _ ForgeAtlas_files/jspdf.umd.min.js.download"></script>
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js";
+const state={pdfDoc:null,currentPage:1,scale:1.5,tool:"redact",annotations:{},dragStart:null,selected:null};
+const els={pdfInput:document.getElementById("pdfInput"),viewer:document.getElementById("viewer"),status:document.getElementById("status"),prevPage:document.getElementById("prevPage"),nextPage:document.getElementById("nextPage"),pageInfo:document.getElementById("pageInfo"),redactTool:document.getElementById("redactTool"),textTool:document.getElementById("textTool"),selectTool:document.getElementById("selectTool"),replacementText:document.getElementById("replacementText"),fontSize:document.getElementById("fontSize"),undoBtn:document.getElementById("undoBtn"),clearPageBtn:document.getElementById("clearPageBtn"),placeTextBtn:document.getElementById("placeTextBtn"),smallerTextBtn:document.getElementById("smallerTextBtn"),largerTextBtn:document.getElementById("largerTextBtn"),updateTextBtn:document.getElementById("updateTextBtn"),deleteSelectedBtn:document.getElementById("deleteSelectedBtn"),downloadBtn:document.getElementById("downloadBtn"),helpBtn:document.getElementById("helpBtn")};
+els.pdfInput.addEventListener("change",handleFile);els.prevPage.addEventListener("click",()=>changePage(-1));els.nextPage.addEventListener("click",()=>changePage(1));els.redactTool.addEventListener("click",()=>setTool("redact"));els.textTool.addEventListener("click",()=>setTool("text"));els.selectTool.addEventListener("click",()=>setTool("select"));els.undoBtn.addEventListener("click",undoLast);els.clearPageBtn.addEventListener("click",clearCurrentPage);els.placeTextBtn.addEventListener("click",placeTextInLastBox);els.smallerTextBtn.addEventListener("click",()=>adjustSelectedTextSize(-2));els.largerTextBtn.addEventListener("click",()=>adjustSelectedTextSize(2));els.updateTextBtn.addEventListener("click",updateSelectedText);els.deleteSelectedBtn.addEventListener("click",deleteSelectedItem);els.downloadBtn.addEventListener("click",downloadEditedPdf);els.helpBtn.addEventListener("click",showHelp);
+function setStatus(msg,error=false){els.status.textContent=msg;els.status.className=error?"status error":"status"}
+function setTool(tool){state.tool=tool;[els.redactTool,els.textTool,els.selectTool].forEach(b=>b.classList.remove("active"));if(tool==="redact")els.redactTool.classList.add("active");if(tool==="text")els.textTool.classList.add("active");if(tool==="select")els.selectTool.classList.add("active")}
+
+document.addEventListener("keydown",(e)=>{
+ if(e.key==="Delete"){deleteSelectedItem();}
+ if(e.key==="Escape"){
+   state.selected=null;
+   renderAnnotations();
+   updateButtons();
+   setStatus("Selection cleared.");
+ }
+});
+
+function showHelp(){
+ alert("ForgeAtlas PDF Editor\n\n1. Upload a PDF\n2. Draw a white box\n3. Type replacement text\n4. Place or edit the text\n5. Use Select / move item to drag text\n6. Double-click text to edit it\n7. Drag the orange corner to resize\n8. Download the edited PDF");
+}
+
+
+async function handleFile(event){const file=event.target.files[0];if(!file)return;if(!file.name.toLowerCase().endsWith(".pdf")){setStatus("Please upload a PDF file.",true);return}setStatus("Loading PDF...");const buffer=await file.arrayBuffer();state.pdfDoc=await pdfjsLib.getDocument({data:buffer}).promise;state.currentPage=1;state.annotations={};updateButtons();await renderPage();setStatus("PDF loaded. Choose a tool and mark the document.")}
+async function renderPage(){if(!state.pdfDoc)return;const page=await state.pdfDoc.getPage(state.currentPage);const viewport=page.getViewport({scale:state.scale});els.viewer.innerHTML="";const wrap=document.createElement("div");wrap.className="page-wrap";wrap.style.width=viewport.width+"px";wrap.style.height=viewport.height+"px";const canvas=document.createElement("canvas");canvas.id="pdfCanvas";canvas.width=viewport.width;canvas.height=viewport.height;const layer=document.createElement("div");layer.className="annotation-layer";layer.style.width=viewport.width+"px";layer.style.height=viewport.height+"px";wrap.appendChild(canvas);wrap.appendChild(layer);els.viewer.appendChild(wrap);const ctx=canvas.getContext("2d");await page.render({canvasContext:ctx,viewport}).promise;layer.addEventListener("pointerdown",onLayerMouseDown);layer.addEventListener("pointermove",onLayerMouseMove);layer.addEventListener("pointerup",onLayerMouseUp);renderAnnotations();updateButtons()}
+function getPageAnnotations(){if(!state.annotations[state.currentPage])state.annotations[state.currentPage]=[];return state.annotations[state.currentPage]}
+function renderAnnotations(){const layer=document.querySelector(".annotation-layer");if(!layer)return;layer.querySelectorAll(".annotation").forEach(el=>el.remove());getPageAnnotations().forEach((a,idx)=>{const div=document.createElement("div");div.className="annotation "+a.type;div.dataset.index=idx;div.style.left=a.x+"px";div.style.top=a.y+"px";div.style.width=a.w+"px";div.style.height=a.h+"px";if(a.type==="text"){div.textContent=a.text;div.style.fontSize=a.fontSize+"px";div.addEventListener("dblclick",(e)=>startInlineEdit(e,idx))}if(state.selected===idx){div.classList.add("selected");if(a.type==="text"){const handle=document.createElement("div");handle.className="resize-handle";handle.dataset.index=idx;div.appendChild(handle)}}layer.appendChild(div)})}
+function onLayerClick(e){if(state.tool!=="text")return;if(e.target.classList.contains("annotation"))return;const rect=e.currentTarget.getBoundingClientRect();const text=els.replacementText.value.trim();if(!text){setStatus("Type replacement text first, then click the PDF.",true);return}const fontSize=Number(els.fontSize.value||14);getPageAnnotations().push({type:"text",x:e.clientX-rect.left,y:e.clientY-rect.top,w:Math.max(160,text.length*fontSize*.45),h:Math.max(fontSize*1.5,28),text,fontSize});state.selected=null;renderAnnotations();updateButtons();setStatus("Replacement text added. You can download or keep editing.")}
+function onLayerMouseDown(e){
+  const layer=e.currentTarget;
+  const rect=layer.getBoundingClientRect();
+
+  if(state.tool==="text"){
+    if(e.target.classList.contains("annotation")) return;
+    const text=els.replacementText.value.trim();
+    if(!text){setStatus("Type replacement text first, then click the PDF.",true);return}
+    const fontSize=Number(els.fontSize.value||14);
+    getPageAnnotations().push({
+      type:"text",
+      x:e.clientX-rect.left,
+      y:e.clientY-rect.top,
+      w:Math.max(160,text.length*fontSize*.45),
+      h:Math.max(fontSize*1.5,28),
+      text,
+      fontSize
+    });
+    state.selected=getPageAnnotations().length-1;
+    setTool("select");
+    renderAnnotations();
+    updateButtons();
+    setStatus("Replacement text added. Drag it to move, drag the orange corner to resize, or double-click to edit.");
+    return;
+  }
+
+  if(e.target.classList.contains("resize-handle")){
+    setTool("select");
+    state.selected=Number(e.target.dataset.index);
+    const a=getPageAnnotations()[state.selected];
+    state.dragStart={mode:"resize",startX:e.clientX,startY:e.clientY,origW:a.w,origH:a.h,origFont:a.fontSize||14};
+    renderAnnotations();
+    updateButtons();
+    setStatus("Drag the corner handle to resize the text box.");
+    return;
+  }
+
+  if(state.tool==="select"&&e.target.classList.contains("annotation")){
+    state.selected=Number(e.target.dataset.index);
+    const selectedItem=getPageAnnotations()[state.selected];
+    if(selectedItem && selectedItem.type==="text"){
+      els.replacementText.value=selectedItem.text || "";
+      els.fontSize.value=selectedItem.fontSize || 14;
+    }
+    state.dragStart={mode:"move",startX:e.clientX,startY:e.clientY,origX:getPageAnnotations()[state.selected].x,origY:getPageAnnotations()[state.selected].y};
+    renderAnnotations();
+    updateButtons();
+    setStatus("Item selected. Drag to move it, double-click text to edit, or use the corner handle to resize.");
+    return;
+  }
+
+  if(state.tool!=="redact")return;
+  state.dragStart={mode:"draw",x:e.clientX-rect.left,y:e.clientY-rect.top,currentX:e.clientX-rect.left,currentY:e.clientY-rect.top}
+}
+function onLayerMouseMove(e){if(!state.dragStart)return;const layer=e.currentTarget;const rect=layer.getBoundingClientRect();if(state.dragStart.mode==="move"){const a=getPageAnnotations()[state.selected];a.x=state.dragStart.origX+(e.clientX-state.dragStart.startX);a.y=state.dragStart.origY+(e.clientY-state.dragStart.startY);renderAnnotations();return}if(state.dragStart.mode==="resize"){const a=getPageAnnotations()[state.selected];a.w=Math.max(30,state.dragStart.origW+(e.clientX-state.dragStart.startX));a.h=Math.max(18,state.dragStart.origH+(e.clientY-state.dragStart.startY));renderAnnotations();return}state.dragStart.currentX=e.clientX-rect.left;state.dragStart.currentY=e.clientY-rect.top;renderAnnotations();const temp=normalizeRect(state.dragStart.x,state.dragStart.y,state.dragStart.currentX,state.dragStart.currentY);const div=document.createElement("div");div.className="annotation redact";div.style.left=temp.x+"px";div.style.top=temp.y+"px";div.style.width=temp.w+"px";div.style.height=temp.h+"px";layer.appendChild(div)}
+function onLayerMouseUp(){if(!state.dragStart)return;if(state.dragStart.mode==="move"){setStatus("Item moved.");}if(state.dragStart.mode==="resize"){setStatus("Text box resized.");}if(state.dragStart.mode==="draw"){const r=normalizeRect(state.dragStart.x,state.dragStart.y,state.dragStart.currentX,state.dragStart.currentY);if(r.w>6&&r.h>6){getPageAnnotations().push({type:"redact",...r});setStatus("Area marked. Add text if needed, or download the edited PDF.")}}state.dragStart=null;renderAnnotations();updateButtons()}
+function normalizeRect(x1,y1,x2,y2){return{x:Math.min(x1,x2),y:Math.min(y1,y2),w:Math.abs(x2-x1),h:Math.abs(y2-y1)}}
+async function changePage(delta){if(!state.pdfDoc)return;const next=state.currentPage+delta;if(next<1||next>state.pdfDoc.numPages)return;state.currentPage=next;state.selected=null;await renderPage()}
+function updateButtons(){const loaded=!!state.pdfDoc;els.prevPage.disabled=!loaded||state.currentPage<=1;els.nextPage.disabled=!loaded||state.currentPage>=(state.pdfDoc?.numPages||1);els.undoBtn.disabled=!loaded||getPageAnnotations().length===0;els.clearPageBtn.disabled=!loaded||getPageAnnotations().length===0;els.placeTextBtn.disabled=!loaded||!getPageAnnotations().some(a=>a.type==="redact");const selectedItem=state.selected!==null&&state.selected!==undefined?getPageAnnotations()[state.selected]:null;els.smallerTextBtn.disabled=!loaded||!selectedItem||selectedItem.type!=="text";els.largerTextBtn.disabled=!loaded||!selectedItem||selectedItem.type!=="text";els.updateTextBtn.disabled=!loaded||!selectedItem||selectedItem.type!=="text";els.deleteSelectedBtn.disabled=!loaded||!selectedItem;els.downloadBtn.disabled=!loaded||Object.values(state.annotations).flat().length===0;els.pageInfo.textContent=loaded?`Page ${state.currentPage} of ${state.pdfDoc.numPages}`:"No PDF loaded"}
+function undoLast(){getPageAnnotations().pop();state.selected=null;renderAnnotations();updateButtons();setStatus("Last item removed.")}
+function clearCurrentPage(){state.annotations[state.currentPage]=[];state.selected=null;renderAnnotations();updateButtons();setStatus("Current page cleared.")}
+
+
+function adjustSelectedTextSize(delta){
+  if(state.selected===null || state.selected===undefined){setStatus("Choose Select / move item, then click the text first.",true);return}
+  const anns=getPageAnnotations();
+  const item=anns[state.selected];
+  if(!item || item.type!=="text"){setStatus("Selected item is not text.",true);return}
+  item.fontSize=Math.max(6,Math.min(72,(item.fontSize||14)+delta));
+  item.h=Math.max(item.h,item.fontSize*1.5);
+  renderAnnotations();
+  updateButtons();
+  setStatus("Selected text size changed.");
+}
+function startInlineEdit(e,idx){
+  e.stopPropagation();
+  state.selected=idx;
+  const div=e.currentTarget;
+  const item=getPageAnnotations()[idx];
+  if(!item || item.type!=="text")return;
+  div.setAttribute("contenteditable","true");
+  div.focus();
+  document.execCommand("selectAll",false,null);
+  function finish(){
+    item.text=div.innerText.trim() || item.text;
+    els.replacementText.value=item.text;
+    div.removeAttribute("contenteditable");
+    div.removeEventListener("blur",finish);
+    div.removeEventListener("keydown",keyHandler);
+    renderAnnotations();
+    updateButtons();
+    setStatus("Text edited.");
+  }
+  function keyHandler(ev){
+    if(ev.key==="Enter" && !ev.shiftKey){ev.preventDefault();div.blur();}
+    if(ev.key==="Escape"){ev.preventDefault();div.innerText=item.text;div.blur();}
+  }
+  div.addEventListener("blur",finish);
+  div.addEventListener("keydown",keyHandler);
+}
+
+function updateSelectedText(){
+  if(state.selected===null || state.selected===undefined){setStatus("Choose Select / move item, then click the text first.",true);return}
+  const anns=getPageAnnotations();
+  const item=anns[state.selected];
+  if(!item || item.type!=="text"){setStatus("Selected item is not text.",true);return}
+  const text=els.replacementText.value.trim();
+  if(!text){setStatus("Type the new replacement text first.",true);return}
+  item.text=text;
+  item.fontSize=Number(els.fontSize.value||item.fontSize||14);
+  item.w=Math.max(item.w,Math.max(160,text.length*item.fontSize*.45));
+  item.h=Math.max(item.h,item.fontSize*1.5);
+  renderAnnotations();
+  updateButtons();
+  setStatus("Selected text updated.");
+}
+
+function deleteSelectedItem(){
+  if(state.selected===null || state.selected===undefined){setStatus("Choose Select / move item, then click the item first.",true);return}
+  const anns=getPageAnnotations();
+  anns.splice(state.selected,1);
+  state.selected=null;
+  renderAnnotations();
+  updateButtons();
+  setStatus("Selected item deleted.");
+}
+
+function placeTextInLastBox(){
+  const text=els.replacementText.value.trim();
+  if(!text){setStatus("Type replacement text first.",true);return}
+  const anns=getPageAnnotations();
+  const lastRedact=[...anns].reverse().find(a=>a.type==="redact");
+  if(!lastRedact){setStatus("Draw a white box first, then place text in it.",true);return}
+  const fontSize=Number(els.fontSize.value||14);
+  anns.push({
+    type:"text",
+    x:lastRedact.x+4,
+    y:lastRedact.y+4,
+    w:Math.max(lastRedact.w-8,160),
+    h:Math.max(lastRedact.h-8,fontSize*1.5),
+    text,
+    fontSize
+  });
+  state.selected=anns.length-1;
+  setTool("select");
+  renderAnnotations();
+  updateButtons();
+  setStatus("Replacement text placed. Drag it to move, drag the orange corner to resize, or double-click to edit.");
+}
+
+async function downloadEditedPdf(){if(!state.pdfDoc)return;setStatus("Building flattened PDF. This may take a moment...");els.downloadBtn.disabled=true;const{jsPDF}=window.jspdf;let out=null;for(let pageNum=1;pageNum<=state.pdfDoc.numPages;pageNum++){const page=await state.pdfDoc.getPage(pageNum);const viewport=page.getViewport({scale:state.scale});const orientation=viewport.width>viewport.height?"landscape":"portrait";if(!out){out=new jsPDF({orientation,unit:"pt",format:[viewport.width,viewport.height],compress:true})}else{out.addPage([viewport.width,viewport.height],orientation)}const canvas=document.createElement("canvas");canvas.width=viewport.width;canvas.height=viewport.height;const ctx=canvas.getContext("2d");await page.render({canvasContext:ctx,viewport}).promise;const anns=state.annotations[pageNum]||[];anns.forEach(a=>{if(a.type==="redact"){ctx.save();ctx.globalAlpha=1;ctx.fillStyle="#ffffff";ctx.fillRect(a.x,a.y,a.w,a.h);ctx.restore()}if(a.type==="text"){ctx.fillStyle="#000000";ctx.font=`${a.fontSize}px Arial`;const lines=String(a.text).split("\\n");lines.forEach((line,idx)=>{ctx.fillText(line,a.x,a.y+a.fontSize+idx*a.fontSize*1.25)})}});const img=canvas.toDataURL("image/jpeg",.92);out.addImage(img,"JPEG",0,0,viewport.width,viewport.height)}out.save("forgeatlas-edited.pdf");els.downloadBtn.disabled=false;setStatus("Edited PDF downloaded.")}
+</script>
+
+
+</body></html>
